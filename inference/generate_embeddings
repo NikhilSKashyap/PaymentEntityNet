@@ -1,0 +1,28 @@
+import torch
+from models.paymentnet import PaymentNet
+from utils.data_loader import load_data
+
+def generate_embeddings(model_path, data_path):
+    # Load the trained model
+    model = PaymentNet(input_dim=30, hidden_dim=64, output_dim=32, num_heads=4, num_layers=2)
+    model.load_state_dict(torch.load(model_path))
+    model.eval()
+
+    # Load data
+    _, test_data = load_data(data_path)  # We'll generate embeddings for the test set
+
+    # Generate embeddings
+    with torch.no_grad():
+        embeddings = model(test_data.x, test_data.edge_index)
+
+    return embeddings
+
+if __name__ == "__main__":
+    model_path = 'paymentnet_model.pth'
+    data_path = 'creditcard_sample.csv'
+    embeddings = generate_embeddings(model_path, data_path)
+    print(f"Generated embeddings shape: {embeddings.shape}")
+    
+    # Here you could save the embeddings or use them for downstream tasks
+    # For example:
+    # torch.save(embeddings, 'transaction_embeddings.pt')
