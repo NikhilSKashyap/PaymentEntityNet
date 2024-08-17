@@ -174,11 +174,3 @@ Model performance is evaluated using:
 9. **Transfer Learning**: Explore pre-training on large-scale financial datasets for improved performance on specific tasks.
 
 10. **Ensemble Methods**: Combine multiple models or architectures for more robust predictions.
-
-## Contributing
-
-Contributions to PaymentEntityNet are welcome. Please feel free to submit pull requests, create issues or spread the word.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
