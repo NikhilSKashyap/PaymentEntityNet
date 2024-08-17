@@ -5,7 +5,7 @@
 PaymentEntityNet is an advanced machine learning project designed to analyze and generate embeddings for payment entities such as merchants, issuers, and customers. The project utilizes a hybrid architecture combining transformer-based sequence modeling with graph neural networks (GNNs) to capture both temporal transaction patterns and complex entity relationships.
 
 ## Project Structure
-
+```
 paymentnet/
 │
 ├── data/
@@ -29,7 +29,7 @@ paymentnet/
 │
 ├── requirements.txt
 └── README.md
-
+```
 ## Technical Details
 
 ### Data Processing
