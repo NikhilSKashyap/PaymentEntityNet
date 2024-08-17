@@ -1,4 +1,3 @@
-```markdown
 # PaymentEntityNet
 
 ## Overview
@@ -183,5 +182,3 @@ Contributions to PaymentEntityNet are welcome. Please feel free to submit pull r
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-```
